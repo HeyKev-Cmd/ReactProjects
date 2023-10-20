@@ -6,10 +6,7 @@ namespace MyInfoApi.Controllers
     [Route("[controller]")]
     public class MyInfoController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
+        
 
         private readonly ILogger<MyInfoController> _logger;
 
@@ -18,7 +15,7 @@ namespace MyInfoApi.Controllers
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetWeatherForecast")]
+        [HttpGet(Name = "GetMyInfo")]
         public IEnumerable<MyInfo> Get()
         {
             var myInfoList = new List<MyInfo>
